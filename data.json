@@ -1,4 +1,12 @@
 [
+    {
+    "name": "Abdul Washid",
+    "image": "https://avatars.githubusercontent.com/u/125122609?v=4&size=64",
+    "github": "https://github.com/AbdulWashid",
+    "twitter": "",
+    "linkedin": "http://www.linkedin.com/in/abdul-washid-20040830M",
+    "skills": ["Laravel", "Django", "Python","php"]
+  },
   {
     "name": "Larconic",
     "image": "",
