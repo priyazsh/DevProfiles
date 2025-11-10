@@ -1,4 +1,12 @@
 [
+     {
+    "name": "Arun",
+    "image": "https://pbs.twimg.com/profile_images/1987576568777170944/MBrCgxzi_400x400.jpg",
+    "github": "https://github.com/hiarun01",
+    "twitter": "https://x.com/hiarun01",
+    "linkedin": "https://www.linkedin.com/in/hiarun01/",
+    "skills": ["React", "NextJS", "Express"]
+  }
     {
     "name": "Abdul Washid",
     "image": "https://avatars.githubusercontent.com/u/125122609?v=4&size=64",
