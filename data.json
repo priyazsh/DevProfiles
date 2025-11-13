@@ -1132,5 +1132,13 @@
     "twitter": "https://x.com/X4Git",
     "linkedin": "",
     "skills": ["Node.js", "TypeScript", "MySQL", "Next.js", "Expo", "Express.js","JavaScript"]
+  },
+  {
+    "name": "Mayur Rogheliya",
+    "image": "https://avatars.githubusercontent.com/u/136033979?v=4",
+    "github": "https://github.com/mayurrogheliya",
+    "twitter": "https://x.com/MayurRogheliya",
+    "linkedin": "https://www.linkedin.com/in/mayur-rogheliya/",
+    "skills": ["MERN", "NextJS", "MySQL"]
   }
 ]

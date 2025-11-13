@@ -96,11 +96,29 @@ searchInput.addEventListener('keyup', () => {
   clearTimeout(debounceTimer);
   const searchTerm = searchInput.value.trim().toLowerCase();
 
-  // Redirect if the search input is empty
-  if (searchTerm === '') {
-    window.location.href = '/'; // Redirect to the root URL if search input is empty
-    return; // Exit the function early
+  const ignoredKeys = [
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "Shift",
+    "Control",
+    "Alt",
+    "Meta",
+    "CapsLock",
+    "Tab",
+    "Escape",
+  ];
+
+  if (ignoredKeys.includes(event.key)) {
+    return;
   }
+
+  if (searchTerm === "" && (event.key === "Backspace" || event.key === "Delete")) {
+    updateURL('');
+    filterProfiles('');
+  return;
+}
 
   debounceTimer = setTimeout(() => {
     updateURL(searchTerm); // Update the URL with the search term
@@ -111,8 +129,12 @@ searchInput.addEventListener('keyup', () => {
 // Function to update the URL
 const updateURL = (searchTerm) => {
   const url = new URL(window.location);
-  url.searchParams.set('search', searchTerm);
-  window.history.pushState({}, '', url);
+  if (searchTerm) {
+    url.searchParams.set("search", searchTerm);
+  } else {
+    url.searchParams.delete("search");
+  }
+  window.history.pushState({}, "", url);
 };
 
 // Filter profiles based on search term
