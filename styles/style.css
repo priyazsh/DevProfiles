@@ -71,7 +71,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 350px;
+  gap: 15px;
 }
 .profile:hover {
   background-color: #333333;
@@ -89,27 +89,30 @@ h1 {
 .name {
   font-weight: 400;
   font-size: 20px;
-  margin-bottom: 10px;
 }
 
 .skills {
-  margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 7px;
+  gap: 7px;
 }
 
 .skill {
   background-color: #444444;
   padding: 5px 10px;
   border-radius: 5px;
-  margin: 0 5px 10px 0;
   font-size: 14px;
 }
 
+.profile .bio {
+  color: #999;
+  text-align: center;
+  line-height: 1.4em;
+  padding: 0 10px;
+}
+
 .social {
-  margin-top: 13px;
   display: flex;
   justify-content: center;
   background-color: #444444;

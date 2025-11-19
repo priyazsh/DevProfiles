@@ -1139,6 +1139,7 @@
     "github": "https://github.com/mayurrogheliya",
     "twitter": "https://x.com/MayurRogheliya",
     "linkedin": "https://www.linkedin.com/in/mayur-rogheliya/",
-    "skills": ["MERN", "NextJS", "MySQL"]
+    "skills": ["MERN", "NextJS", "MySQL"],
+    "bio":"Aspiring MERN developer who loves building impactful web applications."
   }
 ]
