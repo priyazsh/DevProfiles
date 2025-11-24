@@ -40,19 +40,15 @@ const displayProfiles = async (profiles) => {
     const skills = profile.skills.map(skill => `<span class="skill">${skill}</span>`).join('');
 
     // Bio
-    let bioText = "";
+    let bio = "";
 
     if (profile.bio && profile.bio.trim() !== "") {
       const maxLength = 60;
-      bioText =
-        profile.bio.length > maxLength
-          ? profile.bio.substring(0, maxLength) + "..."
-          : profile.bio;
-    } else {
-      bioText = "Bio not provided";
+      const bioText = profile.bio.length > maxLength
+        ? profile.bio.substring(0, maxLength) + "..."
+        : profile.bio;
+      bio = `<div class="bio"><p>${bioText}</p></div>`;
     }
-    
-    const bio = `<p>${bioText}</p>`;
 
     // Social links with improved accessibility
     const social = `
@@ -68,7 +64,7 @@ const displayProfiles = async (profiles) => {
       </div>
       <h2 class="name">${profile.name}</h2>
       <div class="skills">${skills}</div>
-      <div class="bio">${bio}</div>
+      ${bio}
       <div class="social">${social}</div>
     `;
 
