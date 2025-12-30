@@ -1,5 +1,13 @@
 [
      {
+    "name": "Vedant Deshpande",
+    "image": "https://avatars.githubusercontent.com/u/71249582?v=4",
+    "github": "https://github.com/vmdeshpande",
+    "twitter": "",
+    "linkedin": "https://linkedin.com/in/vedant-devv",
+    "skills": ["React", "NextJS", "Express", "NodeJS", "MongoDB"]
+  },
+     {
     "name": "Arun",
     "image": "https://pbs.twimg.com/profile_images/1987576568777170944/MBrCgxzi_400x400.jpg",
     "github": "https://github.com/hiarun01",
