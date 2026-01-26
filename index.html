@@ -25,58 +25,135 @@
 </head>
 <body>
     <header>
-        <p class="logo"></p>
+        <div class="logo"></div>
         <h1><span id="Dev">Dev</span>Profiles</h1>
     </header>
+
     <main>
-        <section class="search">
-            <input type="text" id="searchInput" placeholder="Search by name or skill...">
+        <section class="hero-section">
+            <h2>Showcase Your Developer Profile</h2>
+            <p>Connect with developers worldwide and highlight your skills</p>
         </section>
-        <section>
-            <a href="https://github.com/oyepriyansh/DevProfiles/blob/main/CONTRIBUTING.md" target="_blank">
-                <button class="add-col">
-                    Add your Profile &nbsp;
-                    <i class="fa-sharp fa-solid fa-user-plus"></i>
-                </button>
+
+        <section class="search-container">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search developers by name or skill...">
+                <span class="search-shortcut">Ctrl+K</span>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <a href="https://github.com/oyepriyansh/DevProfiles/blob/main/CONTRIBUTING.md" target="_blank" class="add-profile-btn">
+                <span class="btn-icon">
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+                <span class="btn-text">Add Your Profile</span>
             </a>
         </section>
-        <section class="no-profile">No Profile Found</section>
+
+        <section class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number" id="profileCount">0</span>
+                <span class="stat-label">Developers</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Skills</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number">30+</span>
+                <span class="stat-label">Countries</span>
+            </div>
+        </section>
+
+        <section class="no-profile">
+            <div class="no-profile-content">
+                <i class="fas fa-search"></i>
+                <h3>No Profiles Found</h3>
+                <p>Try adjusting your search terms or add a new profile</p>
+            </div>
+        </section>
+
         <section class="container"></section>
     </main>
-    <hr>
+
     <footer>
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
         <div class="footer-content">
-            <div class="about">
-                <p class="logo"></p>
-                <p>DevProfiles is a platform for developers to easily share their profiles, spotlight your skills, and connect with fellow developers in the community.</p>
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="logo"></div>
+                    <div class="brand-text">
+                        <h3>DevProfiles</h3>
+                        <p>Building the ultimate developer community platform</p>
+                    </div>
+                </div>
+
+                <div class="footer-links-wrapper">
+                    <div class="flinks">
+                        <div class="flink-group">
+                            <h4>Documentation</h4>
+                            <a href="https://github.com/oyepriyansh/DevProfiles/blob/main/CONTRIBUTING.md" target="_blank">
+                                <i class="fas fa-code-branch"></i> Contributing Guide
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-book"></i> How to Add Profile
+                            </a>
+                        </div>
+                        <div class="flink-group">
+                            <h4>Legal</h4>
+                            <a href="https://github.com/oyepriyansh/DevProfiles/blob/main/LICENSE" target="_blank">
+                                <i class="fas fa-file-alt"></i> The Unlicense
+                            </a>
+                            <a href="https://github.com/oyepriyansh/DevProfiles/blob/main/CODE_OF_CONDUCT.md" target="_blank">
+                                <i class="fas fa-handshake"></i> Code of Conduct
+                            </a>
+                        </div>
+                        <div class="flink-group fbtn">
+                            <a href="https://github.com/oyepriyansh/DevProfiles" target="_blank" id="star">
+                                <i class="fas fa-star"></i> Star us ⭐
+                            </a>
+                            <a href="https://github.com/sponsors/oyepriyansh" target="_blank" id="sponsor">
+                                <i class="fas fa-heart"></i> Sponsor 💖
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flinks">
-                <div>
-                    <p>Documentation</p>
-                    <a href="https://github.com/oyepriyansh/DevProfiles/blob/main/CONTRIBUTING.md" target="_blank">Contributing Guide</a>
-                    <a href="#" target="_blank">How to add profile?</a>
+
+            <div class="footer-bottom">
+                <div class="ficons">
+                    <a href="https://x.com/oyepriyansh" target="_blank" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://github.com/oyepriyansh" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/oyepriyansh" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                 </div>
-                <div>
-                    <p>License</p>
-                    <a href="https://github.com/oyepriyansh/DevProfiles/blob/main/LICENSE" target="_blank">The Unlicense</a>
-                    <a href="https://github.com/oyepriyansh/DevProfiles/blob/main/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>
-                </div>
-                <div class="fbtn">
-                    <a href="https://github.com/oyepriyansh/DevProfiles" target="_blank" id="star">Star us ⭐</a>
-                    <a href="https://github.com/sponsors/oyepriyansh" target="_blank" id="sponsor">Sponsor 💖</a>
-                </div>
+                <p class="copyright">
+                    <i class="fas fa-copyright"></i>
+                    <span id="currentYear"></span> DevProfiles | Crafted with <i class="fas fa-heart" style="color: #ff6b6b;"></i> by Developers
+                </p>
             </div>
         </div>
-        <div class="ficons">
-            <a href="https://x.com/oyepriyansh" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://github.com/oyepriyansh" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/oyepriyansh" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <p class="copyright">© <span id="currentYear"></span> DevProfiles | All rights reserved.</p>
     </footer>
-    <button id="backToTopBtn" class="top-btn">
-        <i class="fa-solid fa-arrow-up"></i>
+
+    <button id="backToTopBtn" class="top-btn" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <span class="btn-glow"></span>
     </button>
+
     <script src="scripts/app.js" defer></script>
 </body>
 </html>

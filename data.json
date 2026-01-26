@@ -1,4 +1,12 @@
 [
+      {
+    "name": "Tushar Khadde",
+    "image": "",
+    "github": "https://github.com/Tusharkhadde",
+    "twitter": "",
+    "linkedin": "https://linkedin.com/in/tushar-khadde-192618342/",
+    "skills": ["React", "NextJS", "Express", "NodeJS", "MongoDB"]
+  },
      {
     "name": "7ames",
     "image": "https://avatars.githubusercontent.com/u/71249582?v=4",
