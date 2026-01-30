@@ -1,5 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+:root {
+  /* Dark theme (default) */
+  --bg-main: #1e1e1e;
+  --bg-secondary: #292929;
+  --bg-hover: #333333;
+  --bg-soft: #444444;
+
+  --text-main: #ddd;
+  --text-muted: #999;
+  --text-light: #fff;
+
+  --accent: #a66efc;
+  --accent-green: #29f199;
+  --accent-orange: #faaf3a;
+
+  --scroll-track: #121212;
+  --scroll-thumb: #333333;
+
+  --search-bg: #1e1e1e;
+  --search-text: #ffffff;
+  --search-placeholder: #777;
+  --search-shadow: rgba(226, 226, 226, 0.9);
+  --search-shadow-focus: rgba(255, 255, 255, 0.5);
+
+  --footer-text-main: #ffffff;
+  --footer-text-muted: #aaaaaa;
+  --footer-text-link: #dddddd;
+  --footer-text-hover: #a66efc;
+}
+
+body.light-theme {
+  /* Light theme */
+  --bg-main: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-hover: #eeeeee;
+  --bg-soft: #e0e0e0;
+
+  --text-main: #222;
+  --text-muted: #555;
+  --text-light: #000;
+
+  --accent: #6a3df0;
+  --accent-green: #0f9d58;
+  --accent-orange: #f39c12;
+
+  --scroll-track: #e0e0e0;
+  --scroll-thumb: #bbbbbb;
+
+  --search-bg: #ffffff;
+  --search-text: #222222;
+  --search-placeholder: #666;
+  --search-shadow: rgba(0, 0, 0, 0.15);
+  --search-shadow-focus: rgba(0, 0, 0, 0.3);
+
+   --footer-text-main: #111111;
+  --footer-text-muted: #555555;
+  --footer-text-link: #333333;
+  --footer-text-hover: #6a3df0;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +69,8 @@
 }
 
 body {
-  background-color: #1e1e1e;
-  color: #ddd;
+  background-color: var(--bg-main);
+  color: var(--text-main);
   font-family: "Poppins", sans-serif;
   text-align: center;
   margin: 0;
@@ -19,15 +81,15 @@ body {
   width: 9px;
 }
 ::-webkit-scrollbar-track {
-  background-color: #121212;
+  background-color: var(--scroll-track);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #333333;
+  background-color: var(--scroll-thumb);
   border-radius: 12px;
 }
 
 header {
-  background-color: #292929;
+  background-color: var(--bg-secondary);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -46,7 +108,7 @@ header {
 }
 
 h1 {
-  color: #29f199;
+  color: var(--accent-green);
   padding: 20px 20px 20px 5px;
   font-size: 36px;
   font-weight: 500;
@@ -60,9 +122,11 @@ h1 {
   margin: 0 auto;
   padding: 5px;
 }
-
+.theme-btn{
+  right: 0;
+}
 .profile {
-  background-color: #292929;
+  background-color: var(--bg-secondary);
   border: none;
   border-radius: 10px;
   padding: 20px;
@@ -74,8 +138,8 @@ h1 {
   gap: 15px;
 }
 .profile:hover {
-  background-color: #333333;
-  border: 1px solid #a66efc;
+  background-color: var(--bg-hover);
+  border: 1px solid var(--accent);
   transition: 150ms;
 }
 
@@ -99,14 +163,14 @@ h1 {
 }
 
 .skill {
-  background-color: #444444;
+  background-color: var(--bg-soft);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 14px;
 }
 
 .profile .bio {
-  color: #999;
+  color: var(--text-muted);
   text-align: center;
   line-height: 1.4em;
   padding: 0 10px;
@@ -115,25 +179,23 @@ h1 {
 .social {
   display: flex;
   justify-content: center;
-  background-color: #444444;
+  background-color: var(--bg-soft);
   padding: 10px;
   border-radius: 20px;
 }
 
 .social a {
-  color: #fff;
+  color: var(--text-light);
   margin: 0 10px;
   font-size: 24px;
   transition: color 0.3s, font-size 0.3s;
 }
 .social a:hover {
-  color: #8d44fa;
+  color: var(--accent);
   font-size: 28px;
 }
 
 button {
-  color: #fff;
-  background-color: #a66efc;
   border-radius: 5%;
   cursor: pointer;
   padding: 10px 20px;
@@ -141,7 +203,14 @@ button {
   font-size: 16px;
   margin: 4px 2px;
 }
-
+button,
+.top-btn {
+  background-color: var(--accent);
+  color: var(--text-light);
+}
+.search {
+  margin: 30px 0;
+}
 .search {
   margin: 30px 0;
 }
@@ -151,21 +220,24 @@ button {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #1e1e1e;
-  color: #fff;
+  background-color: var(--search-bg);
+  color: var(--search-text);
   font-size: 16px;
-  box-shadow: 0px 0px 5px rgba(226, 226, 226, 0.938);
+  box-shadow: 0 0 5px var(--search-shadow);
 }
+
 #searchInput::placeholder {
-  color: #777;
+  color: var(--search-placeholder);
 }
+
 #searchInput:focus {
   outline: none;
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 6px var(--search-shadow-focus);
 }
 
 footer {
-  background-color: #1e1e1e;
+  background-color: var(--bg-main);
+  color: var(-footer-text-main);
   padding: 40px 0;
   display: flex;
   flex-direction: column;
@@ -184,13 +256,13 @@ footer {
   margin-bottom: 10px;
   display: none;
   border-radius: 10px;
-  background-color: #a66efc;
+  background-color: var(--accent);
 }
 .arrow-icon {
   animation: bounce 2s infinite ease-in-out;
 }
 .arrow-icon > path {
-  fill: #fff;
+  fill: var(--text-light);
 }
 
 @keyframes bounce {
@@ -209,7 +281,7 @@ footer {
 }
 
 #Dev {
-  color: #faaf3a;
+  color: var(--accent-orange);
 }
 
 @media screen and (max-width: 768px) {
@@ -247,39 +319,43 @@ footer {
 .about p.logo {
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-light);
   margin: 0;
 }
 .about p {
   margin: 10px 0;
-  color: #aaa;
+  color: var(--footer-text-muted);
+}
+.about a {
+  color: var(--footer-text-link);
+  text-decoration: none
 }
 .ficons {
   margin-top: 20px;
 }
 .ficons a {
-  color: #fff;
+  color: var(--text-light);
   padding: 10px;
   font-size: 24px;
   text-decoration: none;
   transition: color 0.3s;
 }
 .ficons a:hover {
-  color: #a66efc;
+  color: var(--accent);
 }
 .flinks p {
   margin-bottom: 20px;
   font-weight: bold;
-  color: #fff;
+  color: var(--text-light);
 }
 .flinks a {
   display: block;
-  color: #ddd;
+  color: var(--search-text);
   margin: 5px 0;
   text-decoration: none;
 }
 .flinks a:hover {
-  color: #a66efc;
+  color: ac;
 }
 #star {
   background-color: #fff;
