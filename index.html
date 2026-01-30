@@ -27,6 +27,7 @@
     <header>
         <p class="logo"></p>
         <h1><span id="Dev">Dev</span>Profiles</h1>
+        <button onclick="toggleTheme();" class="theme-btn"><i><i class="fa-solid fa-moon"></i></button>
     </header>
     <main>
         <section class="search">
@@ -78,5 +79,18 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
     <script src="scripts/app.js" defer></script>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("light-theme");
+
+            let theme = document.querySelector(".theme-btn");
+
+            if(theme.innerHTML == `<i><i class="fa-solid fa-moon"></i></i>`){
+                theme.innerHTML = `<i><i class="fa-solid fa-sun"></i></i>`;
+            }else{
+                theme.innerHTML = `<i><i class="fa-solid fa-moon"></i></i>`;
+            }
+        }
+    </script>
 </body>
 </html>
