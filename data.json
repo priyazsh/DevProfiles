@@ -8,6 +8,14 @@
     "skills": ["HTML", "JavaScript", "React", "Java", "Arduino", "CPP"]
   },
      {
+    "name": "Zubariel",
+    "image": "https://zubariel.is-a.dev/images/1pfp.jpg",
+    "github": "https://github.com/itszubariel",
+    "twitter": "",
+    "linkedin": "",
+    "skills": ["JavaScript", "TypeScript", "React", "Node.js", "Java", "C++", "Python", "C#"]
+  },
+     {
     "name": "Vedant Deshpande",
     "image": "https://avatars.githubusercontent.com/u/71249582?v=4",
     "github": "https://github.com/vmdeshpande",
